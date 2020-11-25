@@ -21,6 +21,9 @@ namespace QuanLyThietBiNhaBep
             //Cai nay thay doi
             //kjjkjoj
             ///123123
+            ///////12312312
+            //////1231231//
+            ///1232131313
             InitializeComponent();
         }
 
