@@ -1,3 +1,4 @@
 /QuanLyThietBiNhaBep/bin/Debug
 /QuanLyThietBiNhaBep/bin/Release
 /QuanLyThietBiNhaBep/obj/Debug
+App.config
