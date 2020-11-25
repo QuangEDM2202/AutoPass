@@ -17,6 +17,10 @@ namespace QuanLyThietBiNhaBep
     {
         public BaoCaoSanPhamNhapTheoNgaycs()
         {
+            //Alo 123
+            //Cai nay thay doi
+            //kjjkjoj
+            ///123123
             InitializeComponent();
         }
 
