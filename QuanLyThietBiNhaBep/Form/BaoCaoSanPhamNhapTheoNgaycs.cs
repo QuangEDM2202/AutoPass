@@ -25,6 +25,7 @@ namespace QuanLyThietBiNhaBep
             //////1231231//
             ///1232131313
             InitializeComponent();
+            //Test thu luc 11h48p
         }
 
         String constr = ConfigurationManager.ConnectionStrings["db_qltbnb"].ConnectionString;
