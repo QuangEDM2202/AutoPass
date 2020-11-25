@@ -339,6 +339,7 @@ namespace QuanLyThietBiNhaBep
 
         void capNhapCbbSanPham(int i)
         {
+            //Console.WriteLine("OK!");
             try
             {
                 TaoDonNhapHang f1 = (TaoDonNhapHang)Application.OpenForms["TaoDonNhapHang"];
