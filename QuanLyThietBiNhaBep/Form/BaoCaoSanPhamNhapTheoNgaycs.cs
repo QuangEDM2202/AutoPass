@@ -87,8 +87,8 @@ namespace QuanLyThietBiNhaBep
                         cnn.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandText = "sp_reportTest";
-                        //cmd.Parameters.AddWithValue("@ngayBatDau", DateTime.Parse(txtNgayBatDau.Text));
-                        //cmd.Parameters.AddWithValue("@ngayKetThuc", DateTime.Parse(txtNgayKetThuc.Text));
+                        cmd.Parameters.AddWithValue("@Gia", txtGia.Text);
+                        cmd.Parameters.AddWithValue("@SL", txtSL.Text);
                         SqlDataAdapter dap = new SqlDataAdapter(cmd);
                         DataTable data = new DataTable();
                         dap.Fill(data);

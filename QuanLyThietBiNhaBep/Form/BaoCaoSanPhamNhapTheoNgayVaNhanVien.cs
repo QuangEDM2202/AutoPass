@@ -38,8 +38,10 @@ namespace QuanLyThietBiNhaBep
                         cnn.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandText = "sp_thongKeSanPhamNhapTHeoNgayVaNhanVien";
-                        cmd.Parameters.AddWithValue("@ngayBatDau", DateTime.Parse(txtNgayBatDau.Text));
-                        cmd.Parameters.AddWithValue("@ngayKetThuc", DateTime.Parse(txtNgayKetThuc.Text));
+                        //cmd.Parameters.AddWithValue("@ngayBatDau", DateTime.Parse(txtNgayBatDau.Text));
+                        //cmd.Parameters.AddWithValue("@ngayKetThuc", DateTime.Parse(txtNgayKetThuc.Text));
+                        cmd.Parameters.AddWithValue("@ngayBatDau", DateTime.ParseExact(txtNgayBatDau.Text, "dd/MM/yyyy", null));
+                        cmd.Parameters.AddWithValue("@ngayKetThuc", DateTime.ParseExact(txtNgayKetThuc.Text, "dd/MM/yyyy", null));
                         SqlDataAdapter dap = new SqlDataAdapter(cmd);
                         DataTable data = new DataTable();
                         dap.Fill(data);

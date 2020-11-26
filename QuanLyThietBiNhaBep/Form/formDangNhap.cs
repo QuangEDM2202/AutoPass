@@ -58,7 +58,9 @@ namespace QuanLyThietBiNhaBep
                         Session.SessionQuyen = Convert.ToInt32(data.Rows[0]["iQuyen"].ToString());
                         this.Hide();
                         mainQuanLy main = new mainQuanLy();
-                        main.Show();
+
+                        main.ShowDialog();
+                        this.Show();
                         Debug.WriteLine("constructor fired sesion " + Session.SessionMaNV);
                     }
                     else

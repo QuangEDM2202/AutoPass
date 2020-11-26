@@ -35,6 +35,14 @@
             this.txtNgayBatDau = new System.Windows.Forms.MaskedTextBox();
             this.txtNgayKetThuc = new System.Windows.Forms.MaskedTextBox();
             this.btnTest = new System.Windows.Forms.Button();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSL = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -42,15 +50,16 @@
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 3);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(753, 305);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(744, 294);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // btnBaoCao
             // 
-            this.btnBaoCao.Location = new System.Drawing.Point(599, 320);
+            this.btnBaoCao.Location = new System.Drawing.Point(586, 21);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(75, 23);
             this.btnBaoCao.TabIndex = 3;
@@ -61,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 328);
+            this.label1.Location = new System.Drawing.Point(53, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 4;
@@ -70,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(330, 325);
+            this.label2.Location = new System.Drawing.Point(317, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 5;
@@ -78,7 +87,7 @@
             // 
             // txtNgayBatDau
             // 
-            this.txtNgayBatDau.Location = new System.Drawing.Point(169, 323);
+            this.txtNgayBatDau.Location = new System.Drawing.Point(156, 24);
             this.txtNgayBatDau.Mask = "00/00/0000";
             this.txtNgayBatDau.Name = "txtNgayBatDau";
             this.txtNgayBatDau.Size = new System.Drawing.Size(131, 20);
@@ -87,7 +96,7 @@
             // 
             // txtNgayKetThuc
             // 
-            this.txtNgayKetThuc.Location = new System.Drawing.Point(431, 321);
+            this.txtNgayKetThuc.Location = new System.Drawing.Point(418, 22);
             this.txtNgayKetThuc.Mask = "00/00/0000";
             this.txtNgayKetThuc.Name = "txtNgayKetThuc";
             this.txtNgayKetThuc.Size = new System.Drawing.Size(133, 20);
@@ -96,31 +105,92 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(599, 370);
+            this.btnTest.Location = new System.Drawing.Point(586, 71);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(75, 23);
             this.btnTest.TabIndex = 8;
-            this.btnTest.Text = "Test";
+            this.btnTest.Text = "Cancel";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // txtGia
+            // 
+            this.txtGia.Location = new System.Drawing.Point(156, 71);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(100, 20);
+            this.txtGia.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Giá bán";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(317, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Số lượng";
+            // 
+            // txtSL
+            // 
+            this.txtSL.Location = new System.Drawing.Point(379, 70);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(100, 20);
+            this.txtSL.TabIndex = 12;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.crystalReportViewer1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(750, 415);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtSL);
+            this.panel1.Controls.Add(this.btnBaoCao);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtNgayBatDau);
+            this.panel1.Controls.Add(this.txtGia);
+            this.panel1.Controls.Add(this.txtNgayKetThuc);
+            this.panel1.Controls.Add(this.btnTest);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 303);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(744, 109);
+            this.panel1.TabIndex = 1;
             // 
             // BaoCaoSanPhamNhapTheoNgaycs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 415);
-            this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.txtNgayKetThuc);
-            this.Controls.Add(this.txtNgayBatDau);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnBaoCao);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "BaoCaoSanPhamNhapTheoNgaycs";
             this.Text = "BaoCaoSanPhamNhapTheoNgaycs";
             this.Load += new System.EventHandler(this.BaoCaoSanPhamNhapTheoNgaycs_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -133,5 +203,11 @@
         private System.Windows.Forms.MaskedTextBox txtNgayBatDau;
         private System.Windows.Forms.MaskedTextBox txtNgayKetThuc;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.TextBox txtGia;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSL;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
