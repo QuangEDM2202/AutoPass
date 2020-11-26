@@ -86,13 +86,11 @@ namespace QuanLyThietBiNhaBep
                     {
                         cnn.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "sp_reportTest";
-                        cmd.Parameters.AddWithValue("@Gia", txtGia.Text);
-                        cmd.Parameters.AddWithValue("@SL", txtSL.Text);
+                        cmd.CommandText = "sp_baoCaoSanPhamChuaBan";
                         SqlDataAdapter dap = new SqlDataAdapter(cmd);
                         DataTable data = new DataTable();
                         dap.Fill(data);
-                        ReportTest report = new ReportTest();
+                        BaoCaoSanPhamChuaDuocBan report = new BaoCaoSanPhamChuaDuocBan();
                         report.SetDataSource(data);
                         crystalReportViewer1.ReportSource = report;
 

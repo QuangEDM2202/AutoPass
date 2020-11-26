@@ -70,6 +70,11 @@
       <DependentUpon>BaoCaoNhapHangTheoNhanVienVaThoiGian.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BaoCaoSanPhamChuaDuocBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCaoSanPhamChuaDuocBan.rpt</DependentUpon>
+    </Compile>
     <Compile Include="BaoCaoSanPhamNhap.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +173,10 @@
     <EmbeddedResource Include="BaoCaoNhapHangTheoNhanVienVaThoiGian.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BaoCaoNhapHangTheoNhanVienVaThoiGian.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoSanPhamChuaDuocBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCaoSanPhamChuaDuocBan.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCaoSanPhamNhap.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

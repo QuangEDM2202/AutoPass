@@ -32,8 +32,46 @@ namespace QuanLyThietBiNhaBep
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+
             if (txtTenSanPham.Text.Length != 0 && txtXuatXu.Text.Length != 0 && txtKichThuoc.Text.Length != 0 && txtGiaBan.Text.Length != 0)
             {
+                if (int.Parse(txtGiaBan.Text) <= 0)
+                {
+                    MessageBox.Show("Giá bán không được nhỏ hơn 0");
+
+                    return;
+                }
+
+                if (int.Parse(txtKichThuoc.Text) <= 0)
+                {
+                    MessageBox.Show("Kích thước không được phép nhỏ hơn 0");
+
+                    return;
+                }
+
+                string filter = "select sTenSanPham as N'Tên Sản Phẩm' from tblSanPham, tblNhomHang where tblNhomHang.iMaNhomHang = tblSanPham.iMaNhomHang and sTenSanPham = '" + txtTenSanPham.Text + "'";
+
+                using (SqlConnection cnn = new SqlConnection(constr))
+                {
+                    using (SqlCommand cmd = cnn.CreateCommand())
+                    {
+                        cnn.Open();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = filter;
+                        SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                        DataTable data = new DataTable();
+                        dap.Fill(data);
+
+                        if (data.Rows.Count > 0)
+                        {
+                            MessageBox.Show("Tên sản phẩm đã tồn tại");
+
+                            return;
+                        }
+                    }
+                }
+
+
                 using (SqlConnection cnn = new SqlConnection(constr))
                 {
 
@@ -339,7 +377,6 @@ namespace QuanLyThietBiNhaBep
 
         void capNhapCbbSanPham(int i)
         {
-            //Console.WriteLine("OK!");
             try
             {
                 TaoDonNhapHang f1 = (TaoDonNhapHang)Application.OpenForms["TaoDonNhapHang"];
@@ -372,6 +409,29 @@ namespace QuanLyThietBiNhaBep
             {
 
             }
+        }
+
+        private void btnTimTheoKhoangGia_Click(object sender, EventArgs e)
+        {
+            string filter = "select iMaSanPham, sTenSanPham as N'Tên Sản Phẩm', sKichThuoc as N'Kích Thước', sXuatXu as N'Xuất Xứ',stennhomhang as N'Nhóm Hàng', sMoTa as N'Mô Tả' from tblSanPham, tblNhomHang where tblNhomHang.iMaNhomHang = tblSanPham.iMaNhomHang ";
+
+            filter = filter + "and iGiaBan >= " + txtTuGia.Text + "AND iGiaBan <= " + txtToiGia.Text;
+
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cnn.Open();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = filter;
+                    SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    dap.Fill(data);
+
+                    dataGridView1.DataSource = data;
+                }
+            }
+            dataGridView1.Columns["iMaSanPham"].Visible = false;
         }
     }
 }

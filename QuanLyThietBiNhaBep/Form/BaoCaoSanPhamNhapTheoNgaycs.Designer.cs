@@ -35,10 +35,7 @@
             this.txtNgayBatDau = new System.Windows.Forms.MaskedTextBox();
             this.txtNgayKetThuc = new System.Windows.Forms.MaskedTextBox();
             this.btnTest = new System.Windows.Forms.Button();
-            this.txtGia = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSL = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -109,41 +106,18 @@
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(75, 23);
             this.btnTest.TabIndex = 8;
-            this.btnTest.Text = "Cancel";
+            this.btnTest.Text = "Báo cáo";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
-            // txtGia
-            // 
-            this.txtGia.Location = new System.Drawing.Point(156, 71);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(100, 20);
-            this.txtGia.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Giá bán";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 76);
+            this.label4.Location = new System.Drawing.Point(334, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(217, 13);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Số lượng";
-            // 
-            // txtSL
-            // 
-            this.txtSL.Location = new System.Drawing.Point(379, 70);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(100, 20);
-            this.txtSL.TabIndex = 12;
+            this.label4.Text = "Báo cáo thống kê sản phẩm chưa bán được";
             // 
             // tableLayoutPanel1
             // 
@@ -163,13 +137,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtSL);
             this.panel1.Controls.Add(this.btnBaoCao);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNgayBatDau);
-            this.panel1.Controls.Add(this.txtGia);
             this.panel1.Controls.Add(this.txtNgayKetThuc);
             this.panel1.Controls.Add(this.btnTest);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -203,10 +174,7 @@
         private System.Windows.Forms.MaskedTextBox txtNgayBatDau;
         private System.Windows.Forms.MaskedTextBox txtNgayKetThuc;
         private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
     }
